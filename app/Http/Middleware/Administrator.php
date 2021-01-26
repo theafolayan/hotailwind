@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Administrator
 {
@@ -16,6 +17,9 @@ class Administrator
      */
     public function handle(Request $request, Closure $next)
     {
+        if (!Auth::user()->role == 'admin') {
+            return redirect('/');
+        }
         return $next($request);
     }
 }
