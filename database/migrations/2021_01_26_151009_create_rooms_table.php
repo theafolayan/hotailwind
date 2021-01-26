@@ -11,8 +11,8 @@ class CreateRoomsTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
+    public function up(){
+
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -22,6 +22,7 @@ class CreateRoomsTable extends Migration
             $table->integer('size_in_ft');
             $table->integer('max_guests');
             $table->integer('smoking_allowed');
+            $table->boolean('pool_included');
             $table->timestamps();
         });
     }
