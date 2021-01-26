@@ -16,6 +16,8 @@ class CreateRoomsTable extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->text('description');
+            $table->string('image_url');
             $table->integer('price_per_night');
             $table->string('bed_size');
             $table->boolean('ac_included');
