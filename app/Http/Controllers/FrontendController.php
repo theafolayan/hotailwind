@@ -9,7 +9,7 @@ class FrontendController extends Controller
 {
     public function getRooms()
     {
-        $rooms = Room::paginate(20);
+        $rooms = Room::paginate(15);
         return view('listing')->with('rooms', $rooms);
     }
 }
