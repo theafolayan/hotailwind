@@ -24,3 +24,4 @@ Route::get('admin-dashboard', function(){
     return view('admin.app');
 })->middleware('auth', 'admin');
 
+Route::get('rooms', [\App\Http\Controllers\FrontendController::class, 'getRooms'])->name('rooms');

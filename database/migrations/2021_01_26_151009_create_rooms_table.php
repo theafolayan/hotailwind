@@ -23,7 +23,7 @@ class CreateRoomsTable extends Migration
             $table->boolean('ac_included');
             $table->integer('size_in_ft');
             $table->integer('max_guests');
-            $table->integer('smoking_allowed');
+            $table->boolean('smoking_allowed');
             $table->boolean('pool_included');
             $table->timestamps();
         });
