@@ -62,6 +62,8 @@
 
         </div>
 @endforeach
+
+{{ $rooms->links() }}
         <!-- END Column -->
 
     </div>
