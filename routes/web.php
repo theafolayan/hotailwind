@@ -20,8 +20,20 @@ Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('admin-dashboard', function(){
-    return view('admin.app');
-})->middleware('auth', 'admin');
+
+Route::name('admin')->prefix('admin')->middleware('admin')->group( function () {
+    Route::get('/dashboard', function () {
+        return 'hello';
+    });
+
+    Route::get('rooms', function () {
+        // Uses first & second Middleware
+           return 'rooms';
+    });
+    Route::get('/reservations', function () {
+        return 'reservations';
+    });
+});
+
 
 Route::get('rooms', [\App\Http\Controllers\FrontendController::class, 'getRooms'])->name('rooms');
