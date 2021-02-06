@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Room;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -18,4 +19,10 @@ class AdminController extends Controller
     {
         return view('admin.create-room');
     }
+    public function showRooms()
+    {
+        $rooms = Room::paginate(9);
+        return view('admin.rooms')->with('rooms', $rooms);
+    }
+
 }
