@@ -14,4 +14,8 @@ class AdminController extends Controller
     {
        return view('admin.rooms');
     }
+    public function createRoom()
+    {
+        return view('admin.create-room');
+    }
 }
