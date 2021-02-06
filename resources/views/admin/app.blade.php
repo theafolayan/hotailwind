@@ -32,6 +32,7 @@
                         @endif
                     @else
                         <span>{{ Auth::user()->name }}</span>
+                         <a class="no-underline hover:underline" href="{{ route('admin.dashboard') }}">{{ __('Dashboard') }}</a>
 
                         <a href="{{ route('logout') }}"
                            class="no-underline hover:underline"

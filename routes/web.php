@@ -21,18 +21,14 @@ Auth::routes();
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::name('admin')->prefix('admin')->middleware('admin')->group( function () {
-    Route::get('/dashboard', function () {
-        return 'hello';
-    });
-
-    Route::get('rooms', function () {
-        // Uses first & second Middleware
-           return 'rooms';
-    });
-    Route::get('/reservations', function () {
-        return 'reservations';
-    });
+Route::name('admin.')->prefix('admin')->middleware('admin')->group( function () {
+    Route::get('/dashboard', [\App\Http\Controllers\AdminController::class, 'showDashboard'])->name('dashboard');
+    Route::get('/rooms', [\App\Http\Controllers\AdminController::class, 'showRooms'])->name('rooms');
+    Route::get('/create-room', [\App\Http\Controllers\AdminController::class, 'showDashboard'])->name('create-room');
+    Route::get('/edit-room', [\App\Http\Controllers\AdminController::class, 'showDashboard'])->name('edit-room');
+    Route::get('/reservations', [\App\Http\Controllers\AdminController::class, 'showDashboard'])->name('reservations');
+    Route::get('/create-reservation', [\App\Http\Controllers\AdminController::class, 'showDashboard'])->name('create-reservation');
+    Route::get('/edit-reservation', [\App\Http\Controllers\AdminController::class, ''])->name('edit-reservation');
 });
 
 
