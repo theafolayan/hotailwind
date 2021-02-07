@@ -43,13 +43,9 @@
 
               <div class="col-span-6 sm:col-span-3">
                        <label for="country" class="block text-sm font-medium text-gray-700">Room Image</label>
-            <label class="w-64 flex flex-row px-6 py-1 bg-white text-blue rounded-lg shadow-lg border border-blue cursor-pointer hover:bg-blue hover:text-blue-700">
-                <svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
-                </svg>
-                <span class="">Select a file</span>
-                <input type='file' class="hidden" />
-            </label>
+
+                {{-- <span class="">Select a file</span> --}}
+                <input type='file' class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
                  </div>
 
 
@@ -72,41 +68,47 @@
                 <label for="max_guests" class="block text-sm font-medium text-gray-700">Max No. of Allowed guests</label>
                 <input type="number" name="max_guests" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
               </div>
-            </div>
-          </div>
 
-          <fieldset>
-              <legend class="text-base font-medium text-gray-900">By Email</legend>
-              <div class="mt-4 space-y-4">
+
+
+
+              {{-- Checkboxes --}}
+              <div class="col-span-6 sm:col-span-6 lg:col-span-2">
                 <div class="flex items-start">
                   <div class="flex items-center h-5">
                     <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
                   </div>
                   <div class="ml-3 text-sm">
-                    <label for="comments" class="font-medium text-gray-700">Comments</label>
-                    <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
-                  </div>
-                </div>
-                <div class="flex items-start">
-                  <div class="flex items-center h-5">
-                    <input id="candidates" name="candidates" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
-                  </div>
-                  <div class="ml-3 text-sm">
-                    <label for="candidates" class="font-medium text-gray-700">Candidates</label>
-                    <p class="text-gray-500">Get notified when a candidate applies for a job.</p>
-                  </div>
-                </div>
-                <div class="flex items-start">
-                  <div class="flex items-center h-5">
-                    <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
-                  </div>
-                  <div class="ml-3 text-sm">
-                    <label for="offers" class="font-medium text-gray-700">Offers</label>
-                    <p class="text-gray-500">Get notified when a candidate accepts or rejects an offer.</p>
+                    <label for="comments" class="font-medium text-gray-700">A.C included?</label>
                   </div>
                 </div>
               </div>
-            </fieldset>
+
+              <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                 <div class="flex items-start">
+                  <div class="flex items-center h-5">
+                    <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                  </div>
+                  <div class="ml-3 text-sm">
+                    <label for="comments" class="font-medium text-gray-700">Smoking Allowed?</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                 <div class="flex items-start">
+                  <div class="flex items-center h-5">
+                    <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                  </div>
+                  <div class="ml-3 text-sm">
+                    <label for="comments" class="font-medium text-gray-700">Access to pool included?</label>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               Create Room
