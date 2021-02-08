@@ -28,7 +28,13 @@ Route::name('admin.')->prefix('admin')->middleware('admin')->group( function () 
     Route::get('/edit-room/{room}', [\App\Http\Controllers\AdminController::class, 'showDashboard'])->name('edit-room');
     Route::get('/reservations', [\App\Http\Controllers\AdminController::class, 'showDashboard'])->name('reservations');
     Route::get('/create-reservation', [\App\Http\Controllers\AdminController::class, 'showDashboard'])->name('create-reservation');
-    Route::get('/edit-reservation', [\App\Http\Controllers\AdminController::class, ''])->name('edit-reservation');
+    // Route::get('/edit-reservation', [\App\Http\Controllers\AdminController::class, ''])->name('edit-reservation');
+
+
+    // Post Routes
+
+    Route::post('/store-room',
+    [\App\Http\Controllers\AdminController::class, 'storeRoom'])->name('store-room');
 });
 
 
