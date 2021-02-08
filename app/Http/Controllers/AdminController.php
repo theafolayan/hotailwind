@@ -25,4 +25,9 @@ class AdminController extends Controller
         return view('admin.rooms')->with('rooms', $rooms);
     }
 
+    public function storeRoom()
+    {
+
+    }
+
 }
