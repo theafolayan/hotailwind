@@ -10,8 +10,8 @@
   </header>
   <main>
     <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <a href="{{route('admin.create-room')}}" class="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline my-3"> Create a New Room</a>
       <div class="px-4 py-6 sm:px-0">
-
             <div class="flex flex-col">
   <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">

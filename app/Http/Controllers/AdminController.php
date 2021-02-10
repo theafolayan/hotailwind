@@ -32,7 +32,6 @@ class AdminController extends Controller
         // dd($request->all());
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:300|min:3',
-            'image' => 'image|required',
             'description' => 'string|required|min:30|max:3000',
             'price_per_night' => 'string|required|min:1|max:6',
             'bed_size' => 'string|required|max:10',
@@ -52,6 +51,7 @@ class AdminController extends Controller
             'price_per_night' => $request->price_per_night,
             'bed_size' => $request->bed_size,
             'size_in_ft' => $request->size_in_ft,
+            'max_guests' => $request->max_guests,
             'smoking_allowed'=> $request->smoking_allowed === 'on' ? 1 : 0,
             'ac_included' => $request->ac_included === 'on' ? 1 : 0,
             'pool_included' => $request->pool_included === 'on' ? 1 : 0,
