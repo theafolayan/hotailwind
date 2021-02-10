@@ -69,7 +69,7 @@
 
           </tbody>
         </table>
-        {{ $rooms->links() }}
+       <div class="container p-2 m-3"> {{ $rooms->links() }} </div>
       </div>
 
   </div>

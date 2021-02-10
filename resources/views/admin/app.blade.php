@@ -112,7 +112,7 @@
 
     </div>
   </nav>
-
+  @include('admin.flash')
   @yield('content')
 
 </div>
