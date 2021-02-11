@@ -26,6 +26,10 @@ Route::name('admin.')->prefix('admin')->middleware('admin')->group( function () 
     Route::get('/rooms', [\App\Http\Controllers\AdminController::class, 'showRooms'])->name('rooms');
     Route::get('/create-room', [\App\Http\Controllers\AdminController::class, 'createRoom'])->name('create-room');
     Route::get('/edit-room/{room}', [\App\Http\Controllers\AdminController::class, 'showDashboard'])->name('edit-room');
+    Route::delete('/{room}/delete', [\App\Http\Controllers\AdminController::class, 'deleteRoom']);
+
+
+    /// Reservations
     Route::get('/reservations', [\App\Http\Controllers\AdminController::class, 'showDashboard'])->name('reservations');
     Route::get('/create-reservation', [\App\Http\Controllers\AdminController::class, 'showDashboard'])->name('create-reservation');
     // Route::get('/edit-reservation', [\App\Http\Controllers\AdminController::class, ''])->name('edit-reservation');

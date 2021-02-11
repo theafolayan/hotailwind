@@ -26,13 +26,13 @@
                 Description
               </th>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Status
-              </th>
-              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Price / night
               </th>
-              <th scope="col" class="relative px-6 py-3">
-                <span class="sr-only">Edit</span>
+               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Edit
+              </th>
+               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Delete
               </th>
             </tr>
           </thead>
@@ -52,17 +52,19 @@
                 <div class="text-sm text-gray-500">{{substr($room->description, 0 , 35)}}</div>
                 <div class="text-sm text-gray-500">{{substr($room->description, 35 , 60)}} ...</div>
               </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                  Active
-                </span>
-              </td>
+
               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                 ${{$room->price_per_night}}/night
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
               </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 py-2 inline-flex text-xs leading-5 font-semibold rounded bg-red-300 text-red-800">
+                  Delete
+                </span>
+              </td>
+
             </tr>
            @endforeach
 

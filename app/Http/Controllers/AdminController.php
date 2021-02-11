@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+       $this->middleware(['auth','admin']);
+    }
     public function showDashboard()
     {
         return view('admin.dashboard');
@@ -23,7 +27,7 @@ class AdminController extends Controller
     }
     public function showRooms()
     {
-        $rooms = Room::paginate(9);
+        $rooms = Room::orderBy('id', 'DESC')->paginate(9);
         return view('admin.rooms')->with('rooms', $rooms);
     }
 
@@ -57,7 +61,15 @@ class AdminController extends Controller
             'pool_included' => $request->pool_included === 'on' ? 1 : 0,
         ]);
 
-        return back()->with('success', 'Room Created successfully!');
+        return redirect()->route('admin.rooms')->with('success', 'Room Created successfully!');
+    }
+
+    public function deleteRoom(Room $room)
+    {
+        
+        $room->delete();
+        return redirect()->route('admin.rooms')->with('success', 'Room deleted successfully!');
+
     }
 
 }
