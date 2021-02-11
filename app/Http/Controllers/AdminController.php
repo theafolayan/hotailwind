@@ -56,6 +56,8 @@ class AdminController extends Controller
             'ac_included' => $request->ac_included === 'on' ? 1 : 0,
             'pool_included' => $request->pool_included === 'on' ? 1 : 0,
         ]);
+
+        return back()->with('success', 'Room Created successfully!');
     }
 
 }
